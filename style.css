@@ -1,0 +1,554 @@
+
+/* ==================================
+   CSS PORTOFOLIO HAFIZ TEGAR
+   ================================== */
+
+/* Variabel warna */
+:root {
+    --navy: #142941;
+    --navy-light: #264762;
+    --blue: #2563eb;
+    --text: #26384a;
+    --muted: #64748b;
+    --background: #f3f6fa;
+    --border: #e2e8f0;
+    --white: #ffffff;
+}
+
+/* Pengaturan dasar */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background-color: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+section,
+header {
+    scroll-margin-top: 76px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+/* ==================================
+   NAVIGASI
+   ================================== */
+
+.navbar-custom {
+    background-color: var(--navy);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--white);
+    font-size: 1.4rem;
+    letter-spacing: 0.3px;
+}
+
+.brand-dot {
+    color: #79b8ff;
+}
+
+.navbar-custom .nav-link {
+    color: #e1eaf5;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: var(--white);
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* ==================================
+   HEADER / HERO
+   ================================== */
+
+.hero {
+    background: linear-gradient(
+        120deg,
+        var(--navy),
+        var(--navy-light)
+    );
+
+    color: var(--white);
+    padding: 86px 0;
+}
+
+.hero-label {
+    color: #b9d7ff;
+    font-size: 0.77rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    overflow-wrap: anywhere;
+}
+
+.hero-description {
+    max-width: 660px;
+    color: #dce8f5;
+    font-size: 1.05rem;
+    margin-top: 17px;
+}
+
+.hero .btn {
+    font-size: 0.96rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+
+/* ==================================
+   KARTU PROFIL
+   ================================== */
+
+.profile-card {
+    width: 100%;
+    max-width: 330px;
+    padding: 32px 24px;
+    text-align: center;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+}
+
+/* Foto profil */
+.avatar {
+    display: block;
+    width: 122px;
+    height: 122px;
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 5px solid #d5e6f9;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-name {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.profile-card p {
+    color: #dce8f5;
+    font-size: 0.94rem;
+}
+
+.profile-university {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.78rem;
+}
+
+
+/* ==================================
+   BAGIAN KONTEN
+   ================================== */
+
+.content-section {
+    padding: 76px 0;
+    scroll-margin-top: 76px;
+}
+
+.section-muted {
+    background-color: var(--background);
+}
+
+.section-heading {
+    margin-bottom: 29px;
+}
+
+/* Label kecil di atas judul */
+.section-label {
+    display: block;
+    color: var(--blue);
+    letter-spacing: 1.7px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*
+   Semua judul bagian menggunakan aturan yang sama.
+   Termasuk Pengalaman dan Sertifikat.
+*/
+.section-heading h2 {
+    color: var(--navy);
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+
+/* ==================================
+   KARTU INFORMASI
+   ================================== */
+
+.info-card {
+    height: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 28px;
+    box-shadow: 0 5px 20px rgba(25, 44, 68, 0.045);
+}
+
+.card-title,
+.info-card h3 {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.info-card p {
+    color: #495a6b;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================
+   INFORMASI PRIBADI
+   ================================== */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 11px 15px;
+    font-size: 0.95rem;
+}
+
+.detail-grid dt {
+    font-weight: 700;
+}
+
+.detail-grid dd {
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================
+   TABEL PENDIDIKAN
+   ================================== */
+
+.table {
+    min-width: 490px;
+    color: var(--text);
+}
+
+.table thead th {
+    background-color: #eaf1fa;
+    color: var(--navy);
+    border-bottom: 0;
+    padding: 14px;
+    white-space: nowrap;
+}
+
+.table td {
+    color: var(--text);
+    padding: 16px 14px;
+}
+
+
+/* ==================================
+   KEAHLIAN DAN MINAT
+   ================================== */
+
+.custom-list {
+    padding-left: 20px;
+}
+
+.custom-list li {
+    padding: 5px 0;
+}
+
+.custom-list li::marker {
+    color: var(--blue);
+}
+
+
+/* ==================================
+   PENGALAMAN
+   ================================== */
+
+.experience-card {
+    border-left: 4px solid var(--blue);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(25, 44, 68, 0.08);
+}
+
+.experience-type {
+    font-size: 0.8rem;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.experience-card .card-title {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+
+/* ==================================
+   SERTIFIKAT
+   ================================== */
+
+/* Jarak judul sertifikat dari kartu pengalaman */
+.certificate-heading {
+    margin-top: 60px;
+    margin-bottom: 28px;
+}
+
+/* Tata letak setiap kolom sertifikat */
+.certificate-grid > div {
+    min-width: 0;
+}
+
+/*
+   Kotak gambar sertifikat:
+   - Tinggi seragam.
+   - Gambar berada di tengah.
+   - Gambar tidak keluar dari kotak.
+*/
+.certificate-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 220px;
+    padding: 12px;
+
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    box-shadow: 0 5px 20px rgba(25, 44, 68, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Efek saat gambar diarahkan kursor */
+.certificate-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(25, 44, 68, 0.12);
+}
+
+/*
+   Gambar memenuhi area yang tersedia tanpa terpotong.
+   object-fit: contain mempertahankan proporsi asli gambar.
+*/
+.certificate-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ==================================
+   KONTAK
+   ================================== */
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.contact-card > div:first-child {
+    min-width: 0;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-style: normal;
+}
+
+.contact-links .btn {
+    border-radius: 8px;
+    padding: 10px 19px;
+}
+
+
+/* ==================================
+   FOOTER
+   ================================== */
+
+.site-footer {
+    padding: 23px 0;
+    background-color: var(--navy);
+    color: #e3edf7;
+    font-size: 0.88rem;
+}
+
+
+/* ==================================
+   RESPONSIVE TABLET
+================================== */
+
+@media (max-width: 991.98px) {
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .navbar-custom .nav-link {
+        margin-left: 0;
+        padding: 9px 0;
+    }
+
+    .profile-card {
+        max-width: 100%;
+    }
+}
+
+
+/* ==================================
+   RESPONSIVE MOBILE
+================================== */
+
+@media (max-width: 575.98px) {
+
+    .hero {
+        padding: 48px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.05rem;
+    }
+
+    .hero-description {
+        font-size: 0.98rem;
+    }
+
+    .profile-card {
+        padding: 25px 18px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content-section {
+        padding: 50px 0;
+    }
+
+    /* Ukuran semua judul bagian tetap konsisten */
+    .section-heading h2 {
+        font-size: 1.65rem;
+        line-height: 1.25;
+    }
+
+    .info-card {
+        padding: 21px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .detail-grid dd {
+        margin-bottom: 12px;
+    }
+
+    /* Sertifikat lebih pendek di layar HP */
+    .certificate-heading {
+        margin-top: 45px;
+    }
+
+    .certificate-link {
+        height: 165px;
+        padding: 8px;
+    }
+
+    .contact-links {
+        width: 100%;
+    }
+
+    .contact-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
